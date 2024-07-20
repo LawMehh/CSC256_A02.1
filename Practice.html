@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Practice.css">
+        <title>Week 2 JavaScript Syntax</title>
+    </head>
+
+    <body>
+        <h1>CSC 256 Week 2 JavaScript Syntax</h1>
+
+        <script>//infile javascript syntax
+            //there are 4 foundational parts of programming
+            //1.variables
+            //2.functions
+            //3.decision logic
+            //4.loops(for, while, do)
+
+            //variables - holds a piece of information
+            //naming a variable, must start with letter or underscore_
+            //you can use a number in variable name but could not start with it
+            //variable name should be discriptive
+            let fName = "Law";  //block scope, only used in current set of code
+            var lName = "Meh";  //function scope, can be used in any function
+
+            theName = "Law Meh"; //this is valid JavaScript but it is hard to debug as it is hard to determine where the variable is created
+
+            var fullName; //can declare variable without initial value
+
+            //create a variable that holds a favorite number
+            //camel case
+            var favNum = 42; 
+
+            //JavaSCript is a loosly type lanague, which can cause missunderstandings, numbers can be mistaken as a string
+
+            //set up a conastant - a value that does not change
+            const PI = 3.14;
+
+            //you can use snake_case for variable names
+            var full_name = "Law Meh";
+
+            //boolean - true or false
+            var isInstructor = false;
+
+            //*********************************************functions
+            //reusable chunks of code
+            function getUserName(){
+                //we can accept variables/values/parameters in to our function
+                //we can return a value, if needed
+                var userName = prompt("Please provide your username: ");
+            }
+
+            //this function accept 2 variables(parameters), returns the sum of the parameters
+            function addNumbers(num1, num2){
+                return num1 + num2;
+            }
+
+            getUserName();
+
+            var sum = addNumbers(2, 5);
+            console .log("the sum is: " + sum);
+
+            //*********************decision logic
+            if(favNum == 42){
+                console.log("You have chosen wisely.");
+            }
+            //you can have as many else if statement as you need
+            else if(favNum == 41){
+                console.log("You have almost chosen wisely.");
+            }
+            //this else statment is catch-all
+            else{
+                console.log("You have chosen poorly.");
+            }
+
+
+        </script>
+    </body>
+</html>
